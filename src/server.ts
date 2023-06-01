@@ -92,8 +92,9 @@ const quitarAudioVideos = () => {
 }
 
 server.get('/api/v1/transform/webmtomp4', (req, res, next) => {
-    convertirVideoWebmMP4();
+    
     try {
+        convertirVideoWebmMP4();
         return res.json({
             message: 'Se ha realizado la conversion de webm a mp4',
         })
